@@ -1,6 +1,6 @@
 /**
  * NPTEL CopyFill Content Script
- * Features: Perfectly Balanced Vertical Layout, Zero Top Cutoff, Dark Sleek Scrollbars, LinkedIn Credits
+ * Features: Dynamic Full-Height Consensus Table, Zero Clipping, Dark Sleek Scrollbars, LinkedIn Credits
  */
 
 (function () {
@@ -527,7 +527,7 @@ ${selection}`;
   }
 
   /* ==========================================================================
-     4. PERFECTLY BALANCED VERTICAL LAYOUT (ZERO CLIPPING)
+     4. FULL-HEIGHT DYNAMIC MATRIX & CONSENSUS FLEXBOX
      ========================================================================== */
   let shadowHost = null;
   let shadowRoot = null;
@@ -605,22 +605,12 @@ ${selection}`;
 
       .drawer-body {
         flex: 1;
-        overflow-y: auto;
+        overflow: hidden;
         padding: 12px 16px;
         display: flex;
         flex-direction: column;
-        gap: 12px;
-      }
-
-      .drawer-body::-webkit-scrollbar {
-        width: 5px;
-      }
-      .drawer-body::-webkit-scrollbar-track {
-        background: #09090b;
-      }
-      .drawer-body::-webkit-scrollbar-thumb {
-        background: #27272a;
-        border-radius: 3px;
+        gap: 10px;
+        min-height: 0;
       }
 
       .model-tabs-bar {
@@ -734,7 +724,7 @@ ${selection}`;
 
       textarea {
         width: 100%;
-        height: 90px;
+        height: 85px;
         background: #09090b;
         border: 1px solid #27272a;
         border-radius: 6px;
@@ -769,13 +759,15 @@ ${selection}`;
         display: flex;
         flex-direction: column;
         gap: 8px;
-        flex-shrink: 0;
+        flex: 1;
+        min-height: 0;
       }
 
       .consensus-header-row {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-shrink: 0;
       }
 
       .consensus-title {
@@ -802,7 +794,8 @@ ${selection}`;
       }
 
       .table-wrapper {
-        max-height: 180px;
+        flex: 1;
+        min-height: 0;
         overflow-y: auto;
       }
 
@@ -827,7 +820,7 @@ ${selection}`;
       }
 
       th, td {
-        padding: 5px 8px;
+        padding: 6px 8px;
         text-align: left;
         border-bottom: 1px solid #27272a;
       }
@@ -1217,9 +1210,6 @@ ${selection}`;
     createSideDrawer();
     const overlay = shadowRoot.querySelector('.drawer-overlay');
     overlay.classList.toggle('open');
-
-    const drawerBody = shadowRoot.getElementById('drawerBody');
-    if (drawerBody) drawerBody.scrollTop = 0;
   }
 
   function createFloatingTrigger() {
