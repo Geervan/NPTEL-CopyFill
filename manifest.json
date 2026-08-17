@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "NPTEL CopyFill",
+  "version": "1.1.0",
+  "description": "Instant copy-prompting, multi-LLM answer comparison, auto-filling, and validation for NPTEL & Swayam courses.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.nptel.ac.in/*",
+    "*://onlinecourses.nptel.ac.in/*",
+    "*://*.swayam.gov.in/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "NPTEL CopyFill Controls",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.nptel.ac.in/*",
+        "*://onlinecourses.nptel.ac.in/*",
+        "*://*.swayam.gov.in/*"
+      ],
+      "js": ["content/content.js"],
+      "css": ["content/content.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

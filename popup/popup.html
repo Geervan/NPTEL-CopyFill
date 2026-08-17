@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPTEL CopyFill</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <div class="header-brand">
+        <svg class="header-logo-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="24" height="24" rx="6" fill="#18181b" stroke="#27272a"/>
+          <path d="M7 12L10.5 15.5L17 8.5" stroke="#4ade80" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h1 class="popup-title">NPTEL CopyFill</h1>
+      </div>
+      <span class="badge">v1.1</span>
+    </header>
+
+    <div class="popup-body">
+      <div class="setting-card">
+        <div class="setting-row">
+          <div>
+            <div class="setting-title">Unblock Copy & Selection</div>
+            <div class="setting-desc">Enables Ctrl+C, Ctrl+V, right-click, and text selection</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="unblockCopyToggle" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="setting-card">
+        <div class="setting-row">
+          <div>
+            <div class="setting-title">Auto-Attach System Prompt</div>
+            <div class="setting-desc">Appends output formatting instructions to copied text</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="autoAppendPromptToggle" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="prompt-box-container" id="promptContainer">
+          <label for="systemPromptInput" class="input-label">Custom Format Prompt</label>
+          <textarea id="systemPromptInput" rows="4"></textarea>
+          <button id="savePromptBtn" class="btn btn-sm btn-secondary">Save Prompt</button>
+          <span id="saveStatus" class="save-status hidden">Saved!</span>
+        </div>
+      </div>
+
+      <div class="action-group">
+        <button id="toggleDrawerBtn" class="btn btn-primary">Open CopyFill Drawer</button>
+      </div>
+    </div>
+
+    <footer class="popup-footer">
+      <span>Crafted with care by </span>
+      <a id="linkedinCreditLink" href="https://www.linkedin.com/in/geervan/" target="_blank" rel="noopener noreferrer" class="credit-link">Geervan</a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

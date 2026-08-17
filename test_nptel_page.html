@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPTEL Online Course - Assignment 1 (Simulator)</title>
+  <style>
+    /* Simulated NPTEL Copy Protection */
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      padding: 30px;
+    }
+
+    .assignment-header {
+      background: #1e3a8a;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+    }
+
+    .question {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .question-title {
+      font-weight: 600;
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+
+    .options-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .option-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 6px 10px;
+      border-radius: 4px;
+    }
+
+    .option-item:hover {
+      background: #f8fafc;
+    }
+
+    .submit-btn {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    // Simulated NPTEL ContextMenu & Selection Blockers
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+      alert('Right click is disabled on this NPTEL assignment page!');
+    });
+
+    document.addEventListener('copy', function(e) {
+      e.preventDefault();
+      alert('Copying content is disabled!');
+    });
+  </script>
+</head>
+<body oncontextmenu="return false;" oncopy="return false;" onselectstart="return false;">
+
+  <div class="assignment-header">
+    <h1>NPTEL: Programming, Data Structures and Algorithms</h1>
+    <p>Week 1 Assignment | Due Date: 2026-08-31</p>
+  </div>
+
+  <form id="nptelForm" onsubmit="event.preventDefault(); alert('Form submitted!');">
+    
+    <!-- Question 1 -->
+    <div class="question gcb-question-row">
+      <div class="question-title">Q1. What is the time complexity of searching an element in a balanced Binary Search Tree (BST)?</div>
+      <div class="options-group">
+        <label class="option-item"><input type="radio" name="q1" value="A"> (a) O(N)</label>
+        <label class="option-item"><input type="radio" name="q1" value="B"> (b) O(log N)</label>
+        <label class="option-item"><input type="radio" name="q1" value="C"> (c) O(1)</label>
+        <label class="option-item"><input type="radio" name="q1" value="D"> (d) O(N^2)</label>
+      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question gcb-question-row">
+      <div class="question-title">Q2. Which of the following sorting algorithms is NOT a stable sort?</div>
+      <div class="options-group">
+        <label class="option-item"><input type="radio" name="q2" value="A"> (a) Merge Sort</label>
+        <label class="option-item"><input type="radio" name="q2" value="B"> (b) Insertion Sort</label>
+        <label class="option-item"><input type="radio" name="q2" value="C"> (c) Quick Sort</label>
+        <label class="option-item"><input type="radio" name="q2" value="D"> (d) Bubble Sort</label>
+      </div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question gcb-question-row">
+      <div class="question-title">Q3. Which data structure follows the LIFO (Last In First Out) principle?</div>
+      <div class="options-group">
+        <label class="option-item"><input type="radio" name="q3" value="A"> (a) Queue</label>
+        <label class="option-item"><input type="radio" name="q3" value="B"> (b) Stack</label>
+        <label class="option-item"><input type="radio" name="q3" value="C"> (c) Linked List</label>
+        <label class="option-item"><input type="radio" name="q3" value="D"> (d) Binary Tree</label>
+      </div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question gcb-question-row">
+      <div class="question-title">Q4. What is the worst-case space complexity of Depth First Search (DFS) on a graph with V vertices?</div>
+      <div class="options-group">
+        <label class="option-item"><input type="radio" name="q4" value="A"> (a) O(V)</label>
+        <label class="option-item"><input type="radio" name="q4" value="B"> (b) O(1)</label>
+        <label class="option-item"><input type="radio" name="q4" value="C"> (c) O(E)</label>
+        <label class="option-item"><input type="radio" name="q4" value="D"> (d) O(V*E)</label>
+      </div>
+    </div>
+
+    <button type="submit" class="submit-btn">Submit Assignment</button>
+  </form>
+
+</body>
+</html>
