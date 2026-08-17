@@ -41,7 +41,7 @@ Generic extensions simply unlock right-click or blindly pick option A. **NPTEL C
 Add as many AI models as you like (ChatGPT, Gemini, Claude, etc.). Set a **Primary Model** as your source of truth, and let NPTEL CopyFill compare all model outputs in a unified consensus matrix.
 
 ### 2. Auto-Fill Answers (Human-in-the-Loop)
-Once you have queried your preferred AI models and verified consensus, click **Auto-Fill Answers**. Instead of manually searching through options line-by-line, NPTEL CopyFill parses your pasted text—matching full phrases, option letters (`A`, `B`, `C`), and multi-item lists (`DNS / SNMP`) directly to the DOM input elements.
+Once you have gathered and verified your answers, click **Auto-Fill Answers**. Instead of manually selecting choices line-by-line, NPTEL CopyFill automatically parses your input text—matching text content, option identifiers, and multi-selection lists directly to the page's input elements.
 
 ### 3. Sanity Check Mode
 Before submitting your assignment, click **Run Sanity Check**. The extension evaluates your selected options against model consensus, highlighting matching selections in green, conflicting selections in red, and unanswered questions in yellow.
