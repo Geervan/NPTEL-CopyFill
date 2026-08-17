@@ -1,6 +1,6 @@
 /**
  * NPTEL CopyFill Content Script
- * Features: Obsidian Dark Design, Slender Header, LinkedIn Creator Credits, Equivalence Consensus
+ * Features: Perfectly Balanced Vertical Layout, Zero Top Cutoff, Dark Sleek Scrollbars, LinkedIn Credits
  */
 
 (function () {
@@ -527,7 +527,7 @@ ${selection}`;
   }
 
   /* ==========================================================================
-     4. SPACIOUS 240PX TABLE & SLEEK OBSIDIAN SCROLLBARS
+     4. PERFECTLY BALANCED VERTICAL LAYOUT (ZERO CLIPPING)
      ========================================================================== */
   let shadowHost = null;
   let shadowRoot = null;
@@ -606,10 +606,21 @@ ${selection}`;
       .drawer-body {
         flex: 1;
         overflow-y: auto;
-        padding: 14px 16px;
+        padding: 12px 16px;
         display: flex;
         flex-direction: column;
-        gap: 14px;
+        gap: 12px;
+      }
+
+      .drawer-body::-webkit-scrollbar {
+        width: 5px;
+      }
+      .drawer-body::-webkit-scrollbar-track {
+        background: #09090b;
+      }
+      .drawer-body::-webkit-scrollbar-thumb {
+        background: #27272a;
+        border-radius: 3px;
       }
 
       .model-tabs-bar {
@@ -619,6 +630,7 @@ ${selection}`;
         border-bottom: 1px solid #27272a;
         padding-bottom: 8px;
         overflow-x: auto;
+        flex-shrink: 0;
         scrollbar-width: none;
         -ms-overflow-style: none;
       }
@@ -664,10 +676,11 @@ ${selection}`;
         background: #18181b;
         border: 1px solid #27272a;
         border-radius: 8px;
-        padding: 12px;
+        padding: 10px 12px;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+        flex-shrink: 0;
       }
 
       .model-view-header {
@@ -721,7 +734,7 @@ ${selection}`;
 
       textarea {
         width: 100%;
-        height: 100px;
+        height: 90px;
         background: #09090b;
         border: 1px solid #27272a;
         border-radius: 6px;
@@ -752,10 +765,11 @@ ${selection}`;
         background: #18181b;
         border: 1px solid #27272a;
         border-radius: 8px;
-        padding: 12px;
+        padding: 10px 12px;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 8px;
+        flex-shrink: 0;
       }
 
       .consensus-header-row {
@@ -788,7 +802,7 @@ ${selection}`;
       }
 
       .table-wrapper {
-        max-height: 240px;
+        max-height: 180px;
         overflow-y: auto;
       }
 
@@ -813,7 +827,7 @@ ${selection}`;
       }
 
       th, td {
-        padding: 6px 8px;
+        padding: 5px 8px;
         text-align: left;
         border-bottom: 1px solid #27272a;
       }
@@ -839,12 +853,12 @@ ${selection}`;
       }
 
       .drawer-footer {
-        padding: 12px 16px;
+        padding: 10px 16px;
         border-top: 1px solid #27272a;
         background: #09090b;
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 6px;
         flex-shrink: 0;
       }
 
@@ -852,7 +866,7 @@ ${selection}`;
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 9px 14px;
+        padding: 8px 14px;
         border-radius: 6px;
         border: none;
         font-size: 12px;
@@ -877,7 +891,7 @@ ${selection}`;
         text-align: center;
         font-size: 11px;
         color: #71717a;
-        padding-top: 4px;
+        padding-top: 2px;
       }
       .creator-credit a {
         color: #a1a1aa;
@@ -898,7 +912,7 @@ ${selection}`;
         <button class="close-btn" id="closeDrawer">&times;</button>
       </div>
 
-      <div class="drawer-body">
+      <div class="drawer-body" id="drawerBody">
         <div class="model-tabs-bar" id="modelTabsBar"></div>
 
         <div class="active-model-view" id="activeModelView"></div>
@@ -1203,6 +1217,9 @@ ${selection}`;
     createSideDrawer();
     const overlay = shadowRoot.querySelector('.drawer-overlay');
     overlay.classList.toggle('open');
+
+    const drawerBody = shadowRoot.getElementById('drawerBody');
+    if (drawerBody) drawerBody.scrollTop = 0;
   }
 
   function createFloatingTrigger() {
