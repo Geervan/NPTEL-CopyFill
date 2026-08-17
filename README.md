@@ -1,4 +1,4 @@
-# ⚡ NPTEL CopyFill
+# NPTEL CopyFill
 
 <p align="center">
   <img src="icons/icon128.png" width="96" height="96" alt="NPTEL CopyFill Logo" />
@@ -9,47 +9,47 @@
 </p>
 
 <p align="center">
-  <a href="#-why-nptel-copyfill-isnt-just-another-copy-paster">Why It's Different</a> •
-  <a href="#-key-modes--features">Key Modes & Features</a> •
-  <a href="#-quick-start-installation">Quick Start</a> •
-  <a href="#-how-it-works">How It Works</a> •
-  <a href="#-privacy--domain-security">Privacy</a>
+  <a href="#why-nptel-copyfill-isnt-just-another-copy-paster">Why It's Different</a> •
+  <a href="#key-modes--features">Key Modes & Features</a> •
+  <a href="#quick-start-installation">Quick Start</a> •
+  <a href="#how-it-works">How It Works</a> •
+  <a href="#privacy--domain-security">Privacy</a>
 </p>
 
 ---
 
-## 🚀 Why NPTEL CopyFill Isn't Just Another Copy-Paster
+## Why NPTEL CopyFill Isn't Just Another Copy-Paster
 
 Generic extensions simply unlock right-click or blindly pick option A. **NPTEL CopyFill is a complete workflow copilot** that compares multiple AI outputs side-by-side, auto-selects verified answers directly on the page, and runs real-time sanity checks before submission.
 
-### 🌟 Core Highlights:
+### Core Highlights:
 
-* 🤖 **Multi-LLM Comparison Mode**: Paste responses from ChatGPT, Gemini, Claude, or DeepSeek into model tabs. Compare all outputs side-by-side in a live Matrix table with instant **🟢 Match** and **🔴 Conflict** badges.
-* ⚡ **Smart Auto-Fill Mode**: Automatically matches LLM answers to the actual NPTEL page elements and selects the corresponding radio buttons, multi-answer checkboxes, and text fields in a single click.
-* 🛡️ **Sanity Check Mode**: Runs a diagnostic check over your active page selections against LLM consensus—calculating a live confidence score  and color-coding valid, invalid, and missing answers directly on the page.
-* 📋 **Automatic Copy & Prompt Attachment**: Silently removes copy-paste restrictions and automatically attaches structured output instructions to your clipboard whenever you copy an assignment question.
+* **Multi-LLM Comparison Mode**: Paste responses from ChatGPT, Gemini, Claude, or DeepSeek into model tabs. Compare all outputs side-by-side in a live Matrix table with instant Match and Conflict badges.
+* **Smart Auto-Fill Mode**: Automatically matches LLM answers to the actual NPTEL page elements and selects the corresponding radio buttons, multi-answer checkboxes, and text fields in a single click.
+* **Sanity Check Mode**: Runs a diagnostic check over your active page selections against LLM consensus—calculating a live confidence score and color-coding valid, invalid, and missing answers directly on the page.
+* **Automatic Copy & Prompt Attachment**: Silently removes copy-paste restrictions and automatically attaches structured output instructions to your clipboard whenever you copy an assignment question.
 
 ---
 
-## ✨ Key Modes & Features
+## Key Modes & Features
 
-### 1. 🤖 Multi-LLM Comparison Mode
+### 1. Multi-LLM Comparison Mode
 Add as many AI models as you like (ChatGPT, Gemini, Claude, etc.). Set a **Primary Model** as your source of truth, and let NPTEL CopyFill compare all model outputs in a unified consensus matrix.
 
-### 2. ⚡ Auto-Fill Answers
+### 2. Auto-Fill Answers
 Instead of searching through options manually, click **Auto-Fill Answers**. NPTEL CopyFill parses full text phrases, option letters (`A`, `B`, `C`), and multi-item lists (`DNS / SNMP`), mapping them directly to the page's input elements.
 
-### 3. 🛡️ Sanity Check Mode
+### 3. Sanity Check Mode
 Before submitting your assignment, click **Run Sanity Check**. The extension evaluates your selected options against model consensus, highlighting matching selections in green, conflicting selections in red, and unanswered questions in yellow.
 
-### 4. 🔓 Copy-Paste & Selection Unblocker
+### 4. Copy-Paste & Selection Unblocker
 Removes NPTEL's right-click blocks, `Ctrl+C` / `Ctrl+V` locks, and text selection preventers so you can navigate and copy questions effortlessly.
 
 ---
 
-## 📦 Quick Start (1-Minute Chrome Installation)
+## Quick Start (1-Minute Chrome Installation)
 
-No build tools or complex setup required!
+No build tools or complex setup required:
 
 1. **Download / Clone Repo**:
    ```bash
@@ -66,11 +66,11 @@ No build tools or complex setup required!
    * Select the `nptel-copyfill` project folder.
 
 4. **Ready to Use**:
-   * Open any assignment on NPTEL or Swayam. Click **NPTEL CopyFill** to launch the drawer!
+   * Open any assignment on NPTEL or Swayam. Click **NPTEL CopyFill** to launch the drawer.
 
 ---
 
-## 🛠️ How It Works
+## How It Works
 
 ```mermaid
 flowchart LR
@@ -83,11 +83,11 @@ flowchart LR
 1. **Copy Question**: Highlight any question on NPTEL and copy (`Ctrl+C`).
 2. **Paste to AI**: Get answers from your favorite AI models.
 3. **Compare Answers**: Paste into the NPTEL CopyFill drawer to see consensus.
-4. **Auto-Fill & Verify**: Click **Auto-Fill Answers** and run **Sanity Check** to verify all choices visually on screen!
+4. **Auto-Fill & Verify**: Click **Auto-Fill Answers** and run **Sanity Check** to verify all choices visually on screen.
 
 ---
 
-## 🔐 Privacy & Security
+## Privacy & Security
 
 * **100% Local Execution**: All string parsing and consensus matching happen strictly inside your browser.
 * **No Telemetry**: NPTEL CopyFill does not send clipboard data or answers to any external server.
@@ -95,8 +95,8 @@ flowchart LR
 
 ---
 
-## 👨‍💻 Creator & Credits
+## Creator & Credits
 
 Crafted with care by **[Geervan](https://www.linkedin.com/in/geervan/)**.
 
-If NPTEL CopyFill saved you time on your assignments, give this repository a ⭐️ star on GitHub!
+If NPTEL CopyFill saved you time on your assignments, give this repository a star on GitHub!
