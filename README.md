@@ -18,14 +18,18 @@
 
 ---
 
+> **Note on Transparency**: NPTEL CopyFill is **NOT an autonomous solver or answer generator**. It does not infer or generate answers independently. You (the student) manually query your trusted AI tools or course resources, review the outputs, and paste them into CopyFill. The extension simply automates repetitive UI clicking, option matching, and consensus matrix comparison on your NPTEL assignment page.
+
+---
+
 ## Why NPTEL CopyFill Isn't Just Another Copy-Paster
 
-Generic extensions simply unlock right-click or blindly pick option A. **NPTEL CopyFill is a complete workflow copilot** that compares multiple AI outputs side-by-side, auto-selects verified answers directly on the page, and runs real-time sanity checks before submission.
+Generic extensions simply unlock right-click or blindly pick option A. **NPTEL CopyFill is a human-in-the-loop workflow copilot** that helps you compare multiple AI outputs side-by-side, auto-selects your verified answers directly on the page, and runs real-time sanity checks before submission.
 
 ### Core Highlights:
 
 * **Multi-LLM Comparison Mode**: Paste responses from ChatGPT, Gemini, Claude, or DeepSeek into model tabs. Compare all outputs side-by-side in a live Matrix table with instant Match and Conflict badges.
-* **Smart Auto-Fill Mode**: Automatically matches LLM answers to the actual NPTEL page elements and selects the corresponding radio buttons, multi-answer checkboxes, and text fields in a single click.
+* **Smart Auto-Fill Mode**: Automatically matches your pasted LLM answers to the actual NPTEL page elements and selects the corresponding radio buttons, multi-answer checkboxes, and text fields in a single click.
 * **Sanity Check Mode**: Runs a diagnostic check over your active page selections against LLM consensus—calculating a live confidence score and color-coding valid, invalid, and missing answers directly on the page.
 * **Automatic Copy & Prompt Attachment**: Silently removes copy-paste restrictions and automatically attaches structured output instructions to your clipboard whenever you copy an assignment question.
 
@@ -36,8 +40,8 @@ Generic extensions simply unlock right-click or blindly pick option A. **NPTEL C
 ### 1. Multi-LLM Comparison Mode
 Add as many AI models as you like (ChatGPT, Gemini, Claude, etc.). Set a **Primary Model** as your source of truth, and let NPTEL CopyFill compare all model outputs in a unified consensus matrix.
 
-### 2. Auto-Fill Answers
-Instead of searching through options manually, click **Auto-Fill Answers**. NPTEL CopyFill parses full text phrases, option letters (`A`, `B`, `C`), and multi-item lists (`DNS / SNMP`), mapping them directly to the page's input elements.
+### 2. Auto-Fill Answers (Human-in-the-Loop)
+Once you have queried your preferred AI models and verified consensus, click **Auto-Fill Answers**. Instead of manually searching through options line-by-line, NPTEL CopyFill parses your pasted text—matching full phrases, option letters (`A`, `B`, `C`), and multi-item lists (`DNS / SNMP`) directly to the DOM input elements.
 
 ### 3. Sanity Check Mode
 Before submitting your assignment, click **Run Sanity Check**. The extension evaluates your selected options against model consensus, highlighting matching selections in green, conflicting selections in red, and unanswered questions in yellow.
@@ -74,14 +78,14 @@ No build tools or complex setup required:
 
 ```mermaid
 flowchart LR
-    A["1. Copy Question"] -->|Auto-Inject Prompt| B["2. Query LLMs"]
+    A["1. Copy Question"] -->|Auto-Inject Prompt| B["2. Query LLMs Manually"]
     B -->|Paste into Model Tabs| C["3. Comparison Mode"]
     C -->|Auto-Fill Answers| D["4. Auto-Select Options"]
     D -->|Run Sanity Check| E["5. Verified 100% Score"]
 ```
 
 1. **Copy Question**: Highlight any question on NPTEL and copy (`Ctrl+C`).
-2. **Paste to AI**: Get answers from your favorite AI models.
+2. **Query LLMs Manually**: Get answers from your favorite AI models using the formatted prompt.
 3. **Compare Answers**: Paste into the NPTEL CopyFill drawer to see consensus.
 4. **Auto-Fill & Verify**: Click **Auto-Fill Answers** and run **Sanity Check** to verify all choices visually on screen.
 
