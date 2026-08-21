@@ -42,7 +42,15 @@ Add as many AI models as you like (ChatGPT, Gemini, Claude, etc.). Set a **Prima
 
 ### 2. Auto-Fill Answers (Human-in-the-Loop)
 Once you have gathered and verified your answers, click **Auto-Fill Answers**. Instead of manually selecting choices line-by-line, NPTEL CopyFill automatically parses your input text—matching text content, option identifiers, and multi-selection lists directly to the page's input elements.
-
+Please provide the correct answers for each question below strictly in the following format:
+1. Option letter or exact answer
+2. Option letter or exact answer
+...
+Example:
+1. A
+2. C
+3. B
+Do not include extra explanations or conversational text.
 ### 3. Sanity Check Mode
 Before submitting your assignment, click **Run Sanity Check**. The extension evaluates your selected options against model consensus, highlighting matching selections in green, conflicting selections in red, and unanswered questions in yellow.
 

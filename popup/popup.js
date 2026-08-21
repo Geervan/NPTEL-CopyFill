@@ -1,7 +1,7 @@
 // Default system prompt template
 const DEFAULT_SYSTEM_PROMPT = `Please provide the correct answers for each question below strictly in the following format:
-1. Option letter or exact answer
-2. Option letter or exact answer
+1. exact answer
+2. exact answer
 ...
 Example:
 1. A
@@ -18,11 +18,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   const saveStatus = document.getElementById('saveStatus');
 
   // Load saved preferences
-  const data = await chrome.storage.local.get({
+  let data = await chrome.storage.local.get({
     unblockCopy: true,
     autoAppendPrompt: true,
     systemPrompt: DEFAULT_SYSTEM_PROMPT
   });
+
+  // Auto-migrate old prompt if it still contains old 'Option letter or exact answer' text
+  if (data.systemPrompt && data.systemPrompt.includes('Option letter or exact answer')) {
+    data.systemPrompt = DEFAULT_SYSTEM_PROMPT;
+    chrome.storage.local.set({ systemPrompt: DEFAULT_SYSTEM_PROMPT });
+  }
 
   unblockCopyToggle.checked = data.unblockCopy;
   autoAppendPromptToggle.checked = data.autoAppendPrompt;
@@ -43,11 +49,27 @@ document.addEventListener('DOMContentLoaded', async () => {
   unblockCopyToggle.addEventListener('change', syncSettings);
   autoAppendPromptToggle.addEventListener('change', syncSettings);
 
+  const resetPromptBtn = document.getElementById('resetPromptBtn');
+
   // Save Prompt Button
   if (savePromptBtn) {
     savePromptBtn.addEventListener('click', () => {
       syncSettings();
       if (saveStatus) {
+        saveStatus.innerText = 'Saved!';
+        saveStatus.classList.remove('hidden');
+        setTimeout(() => saveStatus.classList.add('hidden'), 2000);
+      }
+    });
+  }
+
+  // Reset Prompt Button
+  if (resetPromptBtn) {
+    resetPromptBtn.addEventListener('click', () => {
+      systemPromptInput.value = DEFAULT_SYSTEM_PROMPT;
+      syncSettings();
+      if (saveStatus) {
+        saveStatus.innerText = 'Reset to Default!';
         saveStatus.classList.remove('hidden');
         setTimeout(() => saveStatus.classList.add('hidden'), 2000);
       }

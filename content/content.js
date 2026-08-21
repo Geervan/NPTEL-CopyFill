@@ -19,8 +19,8 @@
     unblockCopy: true,
     autoAppendPrompt: true,
     systemPrompt: `Please provide the correct answers for each question below strictly in the following format:
-1. Option letter or exact answer
-2. Option letter or exact answer
+1. exact answer
+2. exact answer
 ...
 Example:
 1. A
@@ -39,7 +39,14 @@ Do not include extra explanations or conversational text.`,
       if (res) {
         if (res.unblockCopy !== undefined) settings.unblockCopy = res.unblockCopy;
         if (res.autoAppendPrompt !== undefined) settings.autoAppendPrompt = res.autoAppendPrompt;
-        if (res.systemPrompt !== undefined) settings.systemPrompt = res.systemPrompt;
+        if (res.systemPrompt !== undefined) {
+          if (res.systemPrompt.includes('Option letter or exact answer')) {
+            // Auto-migrate old prompt in storage to new default
+            chrome.storage.local.set({ systemPrompt: settings.systemPrompt });
+          } else {
+            settings.systemPrompt = res.systemPrompt;
+          }
+        }
         if (res.llmModels && Array.isArray(res.llmModels) && res.llmModels.length > 0) {
           settings.llmModels = res.llmModels;
         }

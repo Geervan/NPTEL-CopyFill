@@ -48,8 +48,11 @@
         <div class="prompt-box-container" id="promptContainer">
           <label for="systemPromptInput" class="input-label">Custom Format Prompt</label>
           <textarea id="systemPromptInput" rows="4"></textarea>
-          <button id="savePromptBtn" class="btn btn-sm btn-secondary">Save Prompt</button>
-          <span id="saveStatus" class="save-status hidden">Saved!</span>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <button id="savePromptBtn" class="btn btn-sm btn-secondary">Save Prompt</button>
+            <button id="resetPromptBtn" class="btn btn-sm btn-secondary" style="background: transparent; opacity: 0.7;">Reset Default</button>
+            <span id="saveStatus" class="save-status hidden">Saved!</span>
+          </div>
         </div>
       </div>
 
